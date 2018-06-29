@@ -10,6 +10,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="UCLATCH.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UCLATCH.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{195BAC12-97ED-4C8E-970B-C1F1E7CDE233}</ProjectGuid>
     <RootNamespace>cuLATCH</RootNamespace>
@@ -84,9 +93,6 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
       <TargetMachinePlatform>64</TargetMachinePlatform>
     </CudaCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <CudaCompile Include="kernel.cu" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 9.0.targets" />
